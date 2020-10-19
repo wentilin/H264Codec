@@ -13,7 +13,8 @@
 using namespace std;
 
 CStreamFile::CStreamFile(char *fileName) {
-    m_inputFile = fopen(fileName, "rb");
+    m_fileName = fileName;
+    m_inputFile = fopen(m_fileName, "rb");
     if (!m_inputFile) {
         file_error(0);
     }
@@ -48,7 +49,7 @@ int CStreamFile::Parse_h264_bitstream() {
         // 解析NAL unit
         if (m_nalVec.size()) {
             uint8 nalType = m_nalVec[0] & 0x1F;
-            cout << L"NAL Unit Type: " << nalType << endl;
+            cout << "NAL Unit Type: " << +nalType << endl;
             
             ebsp_to_sodb();
             CNALUnit nalUnit(&m_nalVec[1], m_nalVec.size()-1);
@@ -72,7 +73,7 @@ int CStreamFile::find_nal_prefix() {
         m_nalVec.push_back(prefix[i]);
     }
     
-    while (!getc(m_inputFile)) {
+    while (!feof(m_inputFile)) {
         if (prefix[pos % 3] == 0 &&
             prefix[(pos + 1) % 3] == 0 &&
             prefix[(pos + 2) % 3] == 1) {
@@ -80,6 +81,7 @@ int CStreamFile::find_nal_prefix() {
             m_nalVec.pop_back();
             m_nalVec.pop_back();
             m_nalVec.pop_back();
+            break;
         } else if (prefix[pos % 3] == 0 &&
                    prefix[(pos + 1) % 3] == 0 &&
                    prefix[(pos + 2) % 3] == 0) {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5408F127253D269D00E2D75A /* test.264 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5408F125253D267500E2D75A /* test.264 */; };
+		5408F12B253D289000E2D75A /* input.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5408F12A253D287700E2D75A /* input.txt */; };
+		5408F12F253D2ABF00E2D75A /* HuffmanCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5408F12D253D2ABF00E2D75A /* HuffmanCode.cpp */; };
 		D723A83B253C2AAB00ABAD90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D723A83A253C2AAB00ABAD90 /* main.cpp */; };
 		D723A848253C2E2A00ABAD90 /* CStreamFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D723A846253C2E2A00ABAD90 /* CStreamFile.cpp */; };
 		D723A84E253C620300ABAD90 /* CNALUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D723A84C253C620300ABAD90 /* CNALUnit.cpp */; };
@@ -15,16 +18,22 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		D723A835253C2AAB00ABAD90 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				5408F12B253D289000E2D75A /* input.txt in CopyFiles */,
+				5408F127253D269D00E2D75A /* test.264 in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5408F125253D267500E2D75A /* test.264 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.264; sourceTree = SOURCE_ROOT; };
+		5408F12A253D287700E2D75A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		5408F12D253D2ABF00E2D75A /* HuffmanCode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HuffmanCode.cpp; sourceTree = "<group>"; };
+		5408F12E253D2ABF00E2D75A /* HuffmanCode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanCode.hpp; sourceTree = "<group>"; };
 		D723A837253C2AAB00ABAD90 /* H264Codec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = H264Codec; sourceTree = BUILT_PRODUCTS_DIR; };
 		D723A83A253C2AAB00ABAD90 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D723A846253C2E2A00ABAD90 /* CStreamFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CStreamFile.cpp; sourceTree = "<group>"; };
@@ -64,12 +73,16 @@
 		D723A839253C2AAB00ABAD90 /* H264Codec */ = {
 			isa = PBXGroup;
 			children = (
+				5408F125253D267500E2D75A /* test.264 */,
 				D723A83A253C2AAB00ABAD90 /* main.cpp */,
 				D723A846253C2E2A00ABAD90 /* CStreamFile.cpp */,
 				D723A847253C2E2A00ABAD90 /* CStreamFile.hpp */,
 				D723A84C253C620300ABAD90 /* CNALUnit.cpp */,
 				D723A84D253C620300ABAD90 /* CNALUnit.hpp */,
 				D723A84A253C2EF900ABAD90 /* Global.h */,
+				5408F12A253D287700E2D75A /* input.txt */,
+				5408F12D253D2ABF00E2D75A /* HuffmanCode.cpp */,
+				5408F12E253D2ABF00E2D75A /* HuffmanCode.hpp */,
 			);
 			path = H264Codec;
 			sourceTree = "<group>";
@@ -130,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5408F12F253D2ABF00E2D75A /* HuffmanCode.cpp in Sources */,
 				D723A848253C2E2A00ABAD90 /* CStreamFile.cpp in Sources */,
 				D723A83B253C2AAB00ABAD90 /* main.cpp in Sources */,
 				D723A84E253C620300ABAD90 /* CNALUnit.cpp in Sources */,
@@ -254,7 +268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4EG25ZT9T6;
+				DEVELOPMENT_TEAM = 8VBF894SB3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -264,7 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4EG25ZT9T6;
+				DEVELOPMENT_TEAM = 8VBF894SB3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
