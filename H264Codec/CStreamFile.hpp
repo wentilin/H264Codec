@@ -51,6 +51,7 @@ private:
     void file_error(int idx);
     int find_nal_prefix();
     void ebsp_to_sodb();
+    void dump_NAL_type(uint8 nalType);
 };
 
 #endif /* CStreamFile_hpp */

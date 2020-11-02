@@ -7,6 +7,7 @@
 
 #include "CStreamFile.hpp"
 #include "CNALUnit.hpp"
+#include "Configuragtion.hpp"
 
 #include <iostream>
 
@@ -18,12 +19,25 @@ CStreamFile::CStreamFile(char *fileName) {
     if (!m_inputFile) {
         file_error(0);
     }
+    
+#if TRACE_CONFIG_LOGOUT
+    g_traceFile.open("trace.txt");
+    if (!g_traceFile.is_open()) {
+        file_error(1);
+    }
+#endif
 }
 
 CStreamFile::~CStreamFile() {
     if (m_inputFile) {
         fclose(m_inputFile);
     }
+    
+#if TRACE_CONFIG_LOGOUT
+    if (g_traceFile.is_open()) {
+        g_traceFile.close();
+    }
+#endif
 }
 
 void CStreamFile::file_info() {
@@ -37,6 +51,9 @@ void CStreamFile::file_error(int idx) {
         case 0:
             cout << L"Error: opening input file failed." << endl;
             break;
+        case 1:
+            cout << L"Error: opening trace file failed." << endl;
+            break;
         default:
             break;
     }
@@ -49,7 +66,7 @@ int CStreamFile::Parse_h264_bitstream() {
         // 解析NAL unit
         if (m_nalVec.size()) {
             uint8 nalType = m_nalVec[0] & 0x1F;
-            cout << "NAL Unit Type: " << +nalType << endl;
+            dump_NAL_type(nalType);
             
             ebsp_to_sodb();
             CNALUnit nalUnit(&m_nalVec[1], m_nalVec.size()-1);
@@ -117,4 +134,14 @@ void CStreamFile::ebsp_to_sodb() {
             itor++;
         }
     }
+}
+
+void CStreamFile::dump_NAL_type(uint8 nalType) {
+#if TRACE_CONFIG_CONSOLE
+    cout << "NAL Unit Type: " << +nalType << endl;
+#endif
+    
+#if TRACE_CONFIG_LOGOUT
+    g_traceFile << "NAL Unit Type: " << to_string(nalType) << endl;
+#endif
 }

@@ -10,6 +10,8 @@
 		5408F127253D269D00E2D75A /* test.264 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5408F125253D267500E2D75A /* test.264 */; };
 		5408F12B253D289000E2D75A /* input.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5408F12A253D287700E2D75A /* input.txt */; };
 		5408F12F253D2ABF00E2D75A /* HuffmanCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5408F12D253D2ABF00E2D75A /* HuffmanCode.cpp */; };
+		5408F138253EE21300E2D75A /* ExpColumCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5408F137253EE21300E2D75A /* ExpColumCodec.cpp */; };
+		54E349E425502D11005E64E7 /* Configuragtion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54E349E325502D11005E64E7 /* Configuragtion.cpp */; };
 		D723A83B253C2AAB00ABAD90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D723A83A253C2AAB00ABAD90 /* main.cpp */; };
 		D723A848253C2E2A00ABAD90 /* CStreamFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D723A846253C2E2A00ABAD90 /* CStreamFile.cpp */; };
 		D723A84E253C620300ABAD90 /* CNALUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D723A84C253C620300ABAD90 /* CNALUnit.cpp */; };
@@ -34,6 +36,10 @@
 		5408F12A253D287700E2D75A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		5408F12D253D2ABF00E2D75A /* HuffmanCode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HuffmanCode.cpp; sourceTree = "<group>"; };
 		5408F12E253D2ABF00E2D75A /* HuffmanCode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HuffmanCode.hpp; sourceTree = "<group>"; };
+		5408F137253EE21300E2D75A /* ExpColumCodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExpColumCodec.cpp; sourceTree = "<group>"; };
+		5408F13B253EFB1A00E2D75A /* ExpColumCodec.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ExpColumCodec.hpp; sourceTree = "<group>"; };
+		54E349E225502CC0005E64E7 /* Configuragtion.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Configuragtion.hpp; sourceTree = "<group>"; };
+		54E349E325502D11005E64E7 /* Configuragtion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Configuragtion.cpp; sourceTree = "<group>"; };
 		D723A837253C2AAB00ABAD90 /* H264Codec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = H264Codec; sourceTree = BUILT_PRODUCTS_DIR; };
 		D723A83A253C2AAB00ABAD90 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D723A846253C2E2A00ABAD90 /* CStreamFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CStreamFile.cpp; sourceTree = "<group>"; };
@@ -83,6 +89,10 @@
 				5408F12A253D287700E2D75A /* input.txt */,
 				5408F12D253D2ABF00E2D75A /* HuffmanCode.cpp */,
 				5408F12E253D2ABF00E2D75A /* HuffmanCode.hpp */,
+				5408F137253EE21300E2D75A /* ExpColumCodec.cpp */,
+				5408F13B253EFB1A00E2D75A /* ExpColumCodec.hpp */,
+				54E349E225502CC0005E64E7 /* Configuragtion.hpp */,
+				54E349E325502D11005E64E7 /* Configuragtion.cpp */,
 			);
 			path = H264Codec;
 			sourceTree = "<group>";
@@ -143,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54E349E425502D11005E64E7 /* Configuragtion.cpp in Sources */,
+				5408F138253EE21300E2D75A /* ExpColumCodec.cpp in Sources */,
 				5408F12F253D2ABF00E2D75A /* HuffmanCode.cpp in Sources */,
 				D723A848253C2E2A00ABAD90 /* CStreamFile.cpp in Sources */,
 				D723A83B253C2AAB00ABAD90 /* main.cpp in Sources */,
